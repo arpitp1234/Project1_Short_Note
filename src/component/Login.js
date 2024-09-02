@@ -1,6 +1,11 @@
 import React,{useState} from 'react'
 import { useHistory } from 'react-router-dom';
 
+
+import './file1.css'
+import './file.js'
+
+
 const Login = (props) => {
     const[credential,setcredential]=useState({email:"",password:""});
     let history=useHistory();
@@ -30,21 +35,23 @@ const onChange=(e)=>{
         setcredential({...credential,[e.target.name]:e.target.value})
 }
   return (
-
-    <div className="container mx-2 mt-3" >
-    <h2><center>Login</center></h2>
-      <form onSubmit={handleSubmit}>
-   <div className="form-group my-2">
-    <label htmlFor="exampleInputEmail1">Email address</label>
-    <input type="email" className="form-control" id="email" name="email" value={credential.email} aria-describedby="emailHelp" placeholder="Enter email" onChange={onChange}/>
-  </div>
-  <div className="form-group my-2">
-    <label htmlFor="exampleInputPassword1">Password</label>
-    <input type="password" className="form-control" name="password"  id="password" value={credential.password} placeholder="password" onChange={onChange}/>
-  </div>
-  <button type="submit" className="btn btn-primary">Submit</button>
-   </form>
-    </div>
+    <body className="container01">
+    <div className="container0">
+    <h1>Please Login</h1>
+    <form onSubmit={handleSubmit}>
+      <div className="form-control0">
+          <input type="email" name="email" value={credential.email} aria-describedby="emailHelp"  onChange={onChange} required />
+           <label><span>Email</span></label>
+      </div>
+      <div className="form-control0">
+          <input type="password" name="password"  id="password" value={credential.password}  onChange={onChange} required />
+           <label><span>Password</span></label>
+      </div>
+      <button className="btn0" type='submit'>Login</button>
+      <p className="text">Don't have a account ? SignUp above</p>
+    </form>
+</div>
+</body>
   )
 }
 

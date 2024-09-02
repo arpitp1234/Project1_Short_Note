@@ -1,6 +1,6 @@
 /////-----------Database Connection------------------------//////
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/notesapp"); /*useUnifiedTopology:true { useNewUrlParser: true,}*/
+mongoose.connect("mongodb://localhost/notesapdgfagggp"); /*useUnifiedTopology:true { useNewUrlParser: true,}*/
 const hostname = "127.0.0.1";
 
 ///--------------------------------------------------------///

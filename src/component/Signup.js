@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
 import {useHistory} from 'react-router-dom'
 
+import './file1.css'
+import './file.js'
+
 const Signup = (props) => {
      const[credential,setcredential]=useState({name:"" ,email:"",password:"",cpassword:""});
     let history=useHistory();
@@ -32,29 +35,30 @@ const onChange=(e)=>{
         setcredential({...credential,[e.target.name]:e.target.value})
 }
   return (
-    <div className="container mt-5">
-      <h2><center>Sign In</center></h2>
+     <body className="container01">
+    <div className="container0">
+    <h1>Please Login</h1>
     <form onSubmit={handleSubmit}>
-    <div className="form-group">
-    <label htmlFor="name">Name</label>
-    <input type="text" className="form-control" id="name" aria-describedby="emailHelp" name='name' placeholder="Enter name" onChange={onChange}/>
+      <div className="form-control0">
+          <input type="text" id="name" aria-describedby="emailHelp" name='name' onChange={onChange} required />
+           <label><span>Name</span></label>
+      </div>
+      <div className="form-control0">
+          <input type="email" id="email" aria-describedby="emailHelp" name='email' onChange={onChange} required />
+           <label><span>Email</span></label>
+      </div>
+      <div className="form-control0">
+          <input type="password" id="password"   name='password' onChange={onChange} minLength={5} required />
+           <label><span>Password</span></label>
+      </div>
+      <div className="form-control0">
+          <input  type="password"  id="confirmpassword"  name='confirmpassword' onChange={onChange} minLength={5} required />
+           <label><span>Confirm Password</span></label>
+      </div>
+      <button className="btn0" type='submit'>Submit</button>
+    </form>
   </div>
-  <div className="form-group">
-    <label htmlFor="email">Email address</label>
-    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" name='email' placeholder="Enter email" onChange={onChange}/>
-  </div>
-  <div className="form-group">
-    <label htmlFor="password">Password</label>
-    <input type="password" className="form-control" id="password" placeholder="Password"  name='password' onChange={onChange} minLength={5} required/>
-  </div>
-  <div className="form-group">
-    <label htmlFor="cpassword">Confirm Password</label>
-    <input type="password" className="form-control" id="confirmpassword" placeholder=" Confirm Password" name='confirmpassword' onChange={onChange} minLength={5} required/>
-  </div>
-  
-  <button type="submit" className="btn btn-primary">Submit</button>
-</form>
-    </div>
+  </body>
   )
 }
 
