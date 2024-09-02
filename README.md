@@ -1,5 +1,7 @@
 
-#This application is basically for storing the short notes.
+#Notes_web_app
+
+The Notes App is a versatile and intuitive application designed to help users to create, read, update and delete their thoughts, tasks, and important information. User can create their account and start keeping their notes.
 
 
 ![Screenshot (182)](https://github.com/user-attachments/assets/e9ee6747-0c6f-4427-8edf-f4f4b2aba4e3)
