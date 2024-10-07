@@ -37,7 +37,7 @@ const onChange=(e)=>{
   return (
      <body className="container01">
     <div className="container0">
-    <h1>Please Login</h1>
+    <h1>Create a Account</h1>
     <form onSubmit={handleSubmit}>
       <div className="form-control0">
           <input type="text" id="name" aria-describedby="emailHelp" name='name' onChange={onChange} required />
